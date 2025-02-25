@@ -1,0 +1,123 @@
+ /* Footer Container */
+.footer {
+  width: 100%;
+  background: #010101;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Manrope", sans-serif;
+}
+
+/* First Section: Footer Boxes */
+.footer-top {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 180px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Sub-links inside Footer */
+.footer-sub-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.footer-sub-links span {
+  font-size: 14px;
+  opacity: 0.8;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* Second Section: Copyright and Terms */
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: gray;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  max-width: 1400px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links span {
+  color: gray;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .footer-box {
+    width: 100%;
+    padding: 6px 0;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+}
