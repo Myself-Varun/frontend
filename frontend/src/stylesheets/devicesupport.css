@@ -1,0 +1,57 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background:transparent;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #959191;
+    margin-bottom: 20px;
+  }
+  
+  .device-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .device-box {
+    padding: 15px;
+    background: #000000;
+    color: white;
+    border-radius: 8px;
+    height: max-content;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.device-box:hover {
+    transform: scale(1.0);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+  .device-name {
+    font-size: 18px;
+    font-weight: bold;
+    
+  }
+  
+  .device-description {
+    font-size: 14px;
+    
+  }
+  

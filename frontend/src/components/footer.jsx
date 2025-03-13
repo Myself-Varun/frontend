@@ -1,8 +1,4 @@
 import "../stylesheets/footer.css";
-import insta from "../assets/imagecopy.png";
-import face from "../assets/imagecopy1.png";
-import link from "../assets/imagecopy2.png";
-
 export default function Footer() {
   return (
     <footer className="footer">

@@ -22,15 +22,17 @@ export default function Faq() {
   return (
     <div className="faq-container">
       <div className="text">
-        <h2>Frequently Asked Questions</h2>
-        <p>Find answers to common questions about our services.</p>
-        <button className="btn">Contact Support</button>
+        <div className="header">
+          <h2>Frequently Asked Questions</h2>
+          <button className="btn">Ask a Question</button>
+        </div>
+        <p>Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about StreamSphere.</p>
       </div>
       <div className="qna-wrapper">
         <div className="qna-column">
           {faqs.slice(0, 4).map((faq, index) => (
             <div key={index} className="qna" onClick={() => toggleFaq(index)}>
-              <div className="question">{faq.question}</div>
+              <div className="question">{faq.question} <span>{openIndex === index ? "-" : "+"}</span></div>
               {openIndex === index && <div className="answer">{faq.answer}</div>}
             </div>
           ))}
@@ -38,7 +40,7 @@ export default function Faq() {
         <div className="qna-column">
           {faqs.slice(4).map((faq, index) => (
             <div key={index + 4} className="qna" onClick={() => toggleFaq(index + 4)}>
-              <div className="question">{faq.question}</div>
+              <div className="question">{faq.question} <span>{openIndex === index + 4 ? "-" : "+"}</span></div>
               {openIndex === index + 4 && <div className="answer">{faq.answer}</div>}
             </div>
           ))}

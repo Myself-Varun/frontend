@@ -40,7 +40,7 @@
   .Box-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
     margin-top: 20px;
   }
@@ -49,9 +49,9 @@
   .sub-Box {
     background: black;
     color: white;
-    padding: 20px;
+    padding: 34px;
     border-radius: 10px;
-    width: 280px;
+    width: 300px;
     text-align: left;
     border: 1px solid #333;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);

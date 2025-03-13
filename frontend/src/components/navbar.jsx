@@ -1,5 +1,4 @@
 import "../stylesheets/navbar.css";
-import logo from "../assets/image.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
