@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from './authContext'; // ensure this is the correct Axios instance
+import axios from 'axios'; // Or './authContext' if using custom axios instance
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -51,9 +51,7 @@ const Signup = () => {
       <input name="username" placeholder="Username" onChange={handleChange} required />
       <input name="emailId" placeholder="Email" type="email" onChange={handleChange} required />
       <input name="password" placeholder="Password" type="password" onChange={handleChange} required />
-
-       
-
+      
       <button type="submit">Register</button>
     </form>
   );
