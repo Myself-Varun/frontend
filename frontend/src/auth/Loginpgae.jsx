@@ -22,7 +22,7 @@ const Login = () => {
 
       localStorage.setItem('token', token); // Store the token
       alert('Login successful');
-      navigate('/'); // Redirect to home or dashboard
+      navigate('/adminpage'); // Redirect to home or dashboard
     } catch (error) {
       alert(error.response?.data?.message || 'Login failed');
     }
