@@ -1,6 +1,6 @@
  import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Directly import axios
+import axios from 'axios'; // Import axios directly
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -16,13 +16,20 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     try {
-      const res = await axios.post('/auth/login', formData); // POST request to backend API
+      // Create an axios instance directly with the base URL and headers
+      const res = await axios.post('http://localhost:9090/api/auth/login', formData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
       const { token } = res.data;
 
       localStorage.setItem('token', token); // Store the token
       alert('Login successful');
-      navigate('/adminpage'); // Redirect to home or dashboard
+      navigate('/adminpage'); // Redirect to admin page or dashboard
     } catch (error) {
       alert(error.response?.data?.message || 'Login failed');
     }
