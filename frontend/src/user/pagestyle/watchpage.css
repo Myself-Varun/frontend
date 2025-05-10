@@ -1,0 +1,49 @@
+.watch-container {
+    padding: 20px;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+  }
+  
+  .watch-container h2 {
+    font-size: 2rem;
+    color: #ffdd57;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  video {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .watch-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #dddddd;
+  }
+  
+  .watch-container strong {
+    color: #ffdd57;
+  }
+  
+  @media (max-width: 768px) {
+    .watch-container {
+      padding: 15px;
+    }
+  
+    .watch-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .watch-container p {
+      font-size: 0.95rem;
+    }
+  }
+  

@@ -1,0 +1,45 @@
+.team-container {
+  position: relative; /* Ensures it follows the flow with relative positioning */
+  top: 100px; /* Adjust this value for the desired gap from the top */
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.team-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.team-slide {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.team-role {
+  font-size: 16px;
+  color: #666;
+}
+
+.team-description {
+  font-size: 14px;
+  color: #444;
+  margin-top: 10px;
+}

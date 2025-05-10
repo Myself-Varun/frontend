@@ -1,0 +1,139 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: transparent;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Title Styling */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Description Styling */
+.description {
+  font-size: 16px;
+  color: #959191;
+  margin-bottom: 20px;
+}
+
+/* Device List Grid */
+.device-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+/* Device Box Styling */
+.device-box {
+  padding: 15px;
+  background: #000000;
+  color: white;
+  border-radius: 8px;
+  height: max-content;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.device-box:hover {
+  transform: scale(1.05); /* Slightly increased scale for hover effect */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Device Name Styling */
+.device-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Device Description Styling */
+.device-description {
+  font-size: 14px;
+}
+
+/* Responsive Design */
+
+/* Tablets and smaller devices */
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .device-list {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust grid for smaller items */
+  }
+
+  .device-name {
+    font-size: 16px;
+  }
+
+  .device-description {
+    font-size: 12px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .device-list {
+    grid-template-columns: 1fr; /* Stack devices vertically on small screens */
+  }
+
+  .device-name {
+    font-size: 14px;
+  }
+
+  .device-description {
+    font-size: 12px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 8px;
+  }
+
+  .title {
+    font-size: 16px; /* Adjusted for smaller screens */
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .device-name {
+    font-size: 14px;
+  }
+
+  .device-description {
+    font-size: 11px;
+  }
+}

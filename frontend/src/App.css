@@ -1,0 +1,12 @@
+ /* Set full app background to black */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(48, 47, 47);
+    color: white; /* Ensures text is visible */
+    font-family: Manrope;
+  }
+  
+  /* Ensure content fills the screen */
+ 
+  

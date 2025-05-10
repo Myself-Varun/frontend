@@ -1,0 +1,135 @@
+ /* Navbar: Fixed on Top */
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 63%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent; /* Semi-transparent background */
+  padding: 12px 24px;
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+  z-index: 1000; /* Ensures it stays above other elements */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Optional: adds a subtle bottom border for better visibility */
+}
+
+/* Logo */
+.logo img {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Menu */
+.nav {
+  display: flex;
+  gap: 18px;
+  background: black;
+  padding: 10px 22px;
+  border-radius: 10px;
+  align-items: center;
+  border: 2px solid rgb(90, 90, 90);
+}
+
+/* Navigation Buttons */
+.nav button {
+  background: transparent;
+  color: white;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: background 0.3s ease, border 0.3s ease;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.nav button:hover {
+  background: rgb(60, 60, 60);
+  border-color: rgb(120, 120, 120);
+}
+
+/* Search & Notification Container */
+.sn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Search Input */
+.sn input {
+  padding: 8px 14px;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 6px;
+  outline: none;
+  background: white;
+  color: black;
+  transition: border-color 0.3s ease;
+}
+
+.sn input:focus {
+  border-color: rgb(100, 100, 255);
+}
+
+/* Prevent Hero Section from Overlapping Navbar */
+.hero {
+  margin-top: 120px; /* Adjust according to navbar height */
+}
+
+/* Responsive Design */
+@media (max-width: 750px) {
+  .bar {
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Allow height to adjust dynamically */
+    padding: 10px;
+  }
+
+  /* Adjust logo size for smaller screens */
+  .logo img {
+    width: 100px; /* Reduce size for better scaling */
+  }
+
+  /* Stack navigation menu below the logo */
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: 100%; /* Full width */
+    text-align: center;
+  }
+
+  /* Ensure buttons are full-width for easy access */
+  .nav button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* Adjust search & notification container */
+  .sn {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Make search input full-width */
+  .sn input {
+    width: 90%;
+  }
+
+  /* Reduce hero section margin for better fit */
+  .hero {
+    margin-top: 140px; /* Adjust based on actual navbar height */
+  }
+}

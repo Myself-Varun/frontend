@@ -1,0 +1,134 @@
+.banner-container {
+  position: relative;
+  width: 950px; /* Fixed width for larger screens */
+  max-width: 90%; /* Ensures it adapts on smaller screens */
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 2rem auto; /* Centers the banner horizontally */
+  background-image: url("../assets/banner1.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px; /* Rounded corners */
+  background-color: transparent;
+}
+
+/* Dark to red gradient overlay */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, black, red);
+  opacity: 0.6;
+  border-radius: 30px; /* Ensures the overlay follows the banner shape */
+}
+
+/* Content Styling */
+.banner-content {
+  position: relative;
+  z-index: 10;
+  color: white;
+  width: 50%;
+  max-width: 500px; /* Ensures content doesn't overflow on smaller screens */
+}
+
+/* Title Styling */
+.banner-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Adds some space below the heading */
+}
+
+/* Description Styling */
+.banner-content p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5; /* Makes the text more readable */
+}
+
+/* Button Styling */
+.banner-button {
+  position: relative;
+  z-index: 10;
+}
+
+.banner-button button {
+  background-color: red !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.banner-button button:hover {
+  background-color: #cc0000 !important; /* Darker red on hover */
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .banner-container {
+    width: 80%;
+    padding: 1.5rem;
+  }
+
+  .banner-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .banner-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .banner-content {
+    width: 100%;
+    max-width: none; /* Remove max-width on mobile to use full width */
+  }
+
+  .banner-content h2 {
+    font-size: 1.6rem; /* Slightly smaller heading on mobile */
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  .banner-button {
+    margin-top: 1rem;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .banner-container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .banner-content h2 {
+    font-size: 1.4rem; /* Smaller text for ultra-small screens */
+  }
+
+  .banner-content p {
+    font-size: 0.9rem;
+  }
+
+  .banner-button button {
+    padding: 0.5rem 1rem;
+  }
+}

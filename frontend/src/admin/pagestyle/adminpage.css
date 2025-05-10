@@ -1,0 +1,78 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.admin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.admin-form {
+  display: flex; /* Use flexbox */
+  justify-content: flex-start; /* Align the content at the start */
+  align-items: flex-start; /* Align the content at the top */
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+  width: 600px; /* Increased width to accommodate previews */
+}
+
+.form-inputs {
+  flex: 1; /* This will take up the remaining space */
+  padding-left: 20px;
+}
+
+h2 {
+  color: #ff0000;
+  text-align: center;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ff0000;
+  background: #2e2e2e;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #ff0000;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #cc0000;
+}
+
+/* Video and Image Previews on the Left Side */
+.preview-container {
+  width: 200px; /* Set a fixed width for the preview container */
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+video,
+img {
+  display: block;
+  max-width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 2px solid #ff0000;
+}
