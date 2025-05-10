@@ -9,7 +9,6 @@ const Signup = () => {
     password: '',
     role: ''
   });
-
   const [roles, setRoles] = useState([]); // dynamic role list
   const navigate = useNavigate();
 
