@@ -31,7 +31,7 @@ export default function Navbar() {
         />
         <FaArrowRight
           className="icons"
-          onClick={() => navigate("/login")}
+          onClick={() => navigate("/admin")}
           title="Login"
         />
       </div>
