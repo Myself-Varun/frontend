@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Your configured Axios instance
+import axios from 'axios'; // Directly import axios
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -17,10 +17,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/auth/login', formData);
+      const res = await axios.post('/auth/login', formData); // POST request to backend API
       const { token } = res.data;
 
-      localStorage.setItem('token', token);
+      localStorage.setItem('token', token); // Store the token
       alert('Login successful');
       navigate('/'); // Redirect to home or dashboard
     } catch (error) {
