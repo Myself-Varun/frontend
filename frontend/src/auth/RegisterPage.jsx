@@ -1,6 +1,6 @@
  import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Or './authContext' if using custom axios instance
+import axios from 'axios'; // Import axios directly
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -9,14 +9,18 @@ const Signup = () => {
     password: '',
     role: ''
   });
-  const [roles, setRoles] = useState([]); // dynamic role list
+  const [roles, setRoles] = useState([]); // Dynamic role list
   const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch roles from backend
     const fetchRoles = async () => {
       try {
-        const res = await axios.get('/auth/roles');
+        const res = await axios.get('http://localhost:9090/api/auth/roles', {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
         setRoles(res.data);
         if (res.data.length > 0) {
           setFormData((prev) => ({ ...prev, role: res.data[0] }));
@@ -36,10 +40,14 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/auth/signup', formData);
+      const res = await axios.post('http://localhost:9090/api/auth/signup', formData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
       alert('Signup successful');
       console.log(res.data);
-      navigate('/login');
+      navigate('/login'); // Redirect to login page
     } catch (error) {
       alert(error.response?.data?.message || 'Signup failed');
     }
