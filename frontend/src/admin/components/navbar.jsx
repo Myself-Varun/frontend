@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <div className="bar">
       {/* Logo Section */}
-      <div className="logo" onClick={() => navigate("/home")}>
+      <div className="logo" onClick={() => navigate("/")}>
         <img src={logo} alt="Logo" />
       </div>
 
